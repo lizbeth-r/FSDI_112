@@ -1,8 +1,9 @@
 from django.views.generic import(
     CreateView,
     ListView,
-    DetailView
+    DetailView,
 )
+
 from .models import Post
 
 class PostListView(ListView):
@@ -17,4 +18,3 @@ class PostCreateView(CreateView):
     template_name = "posts/new.html"
     model = Post
     fields = ["title", "subtitle", "body"]
-    
